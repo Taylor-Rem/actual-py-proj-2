@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cupcakes</title>
+    <link rel="stylesheet" href="/static/general.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href="{{url_for('orders_page')}}"><button>Your Order</button></a>
+        <p>Cart Total: {{ order_total }}</p>
+      </header>
+      <div class="cupcakes-con">
+        {% for cupcake in cupcakes %}
+        <div class="cupcake-con">
+          <p>Name: {{ cupcake['name'] }}</p>
+          <p>Price: {{ cupcake['price'] }}</p>
+          <p>Flavor: {{ cupcake['flavor'] }}</p>
+          <p>Frosting: {{ cupcake['frosting'] }}</p>
+          {% if cupcake['filling'] %}
+          <p>Filling: {{ cupcake['filling'] }}</p>
+          {% endif %} {% if cupcake['sprinkles'] %}
+          <p>Sprinkles: {{ cupcake['sprinkles'] }}</p>
+          {% endif %}
+          <a href="{{ url_for('add_cupcake', name=cupcake['name'])}}">
+            <button>Add to Cart</button>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+  </body>
+</html>
