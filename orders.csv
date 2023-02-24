@@ -1,5 +1,3 @@
-name,price,flavor,frosting,filling,sprinkles
-
-Oreo,1.99,Chocolate,Cookies and Cream,Cookies and Cream,Chocolate
-Stars and Stripes,2.99,Vanilla,Vanilla,Chocolate,Red White and Blue
-Strawberry Delight,1.99,Strawberry,Vanilla,Chocolate,StrawberryOreo,1.99,Chocolate,Cookies and Cream,Cookies and Cream,Chocolate
+size,name,price,flavor,frosting,filling,sprinkles
+regular,Oreo,1.99,Chocolate,Cookies and Cream,Cookies and Cream,Chocolate
+regular,Boring Vanilla,1.99,Vanilla,Vanilla,Vanilla,Vanilla

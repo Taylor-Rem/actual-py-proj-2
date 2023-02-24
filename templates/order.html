@@ -17,6 +17,7 @@
       <div class="cupcakes-con">
         {% for cupcake in cupcakes %}
         <div class="cupcake-con">
+          <p>Size: {{ cupcake['size']}}</p>
           <p>Name: {{ cupcake['name'] }}</p>
           <p>Price: {{ cupcake['price'] }}</p>
           <p>Flavor: {{ cupcake['flavor'] }}</p>
